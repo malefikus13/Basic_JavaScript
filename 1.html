@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 3. Циклы, массивы, структуры данных</title>
+</head>
+
+<body>
+	<script>
+		"use strict";
+
+		// Задание 1
+		for (let i = 0; i <= 10; i++) {
+			if (i === 0) {
+				console.log(`${i} - это ноль`);
+			} else if (i % 2 === 1) {
+				console.log(`${i} - нечетное число`);
+			} else {
+				console.log(`${i} - четное число`);
+			}
+		}
+
+		// Задание 2
+		const array = [1, 2, 3, 4, 5, 6, 7];
+		// начиная с позиции 3, удалить 2 элемента
+		array.splice(3, 2);
+		console.log('Итоговые значения:');
+		console.log(array);
+
+		// Задание 3
+		const randomArray = [];
+		for (let i = 0; i < 5; i++) {
+			randomArray.push(Math.round(Math.random() * 10));
+		}
+		console.log('Сгенерированные числа:');
+		console.log(randomArray);
+		console.log('Сгенерированные числа в квадрате:');
+		console.log(randomArray.map(item => item ** 2));
+
+		// Задание 4
+		const generationArray = [];
+
+		for (let i = 0; i < 5; i++) {
+			generationArray.push(Math.round(Math.random() * 10));
+		}
+
+		console.log('Сгенерированный массив:');
+		console.log(generationArray);
+		console.log('Сгенерированный массив в котором удаляем все 3:');
+		console.log(generationArray.filter(elem => elem !== 3));
+		console.log('Сгенерированный массив где все значения увеличенны на 10%:');
+		console.log(generationArray.map(elem => elem += elem * 10 / 100));
+
+		// Задание 5
+		for (let i = 0; i < 10; console.log(i++)) { }
+	</script>
+</body>
+
+</html>
